@@ -97,6 +97,7 @@ button {
 .labels {
 	margin: 0;
 	padding: 8px 0 2px 0;
+	font-size: 19px;
 }
 
 #namelabel {
@@ -352,12 +353,12 @@ button {
 	padding: 4px 0 0;
 }
 
-#segutil, #segutil2, #segcont, #putil, #pcont, #pql, #fx, #palw,
+#segutil, #segutil2, #segcont, #putil, #pcont, #pql, #fx, #palw, #bsp,
 .fnd {
 	max-width: 280px;
 }
 
-#putil, #segutil, #segutil2 {
+#putil, #segutil, #segutil2, #bsp {
 	min-height: 42px;
 	margin: 0 auto;
 }
@@ -793,7 +794,7 @@ input[type=range]::-moz-range-thumb {
 /* buttons */
 .btn {
 	padding: 8px;
-	/*margin: 10px 4px;*/
+	margin: 10px 4px;
 	width: 230px;
 	font-size: 19px;
 	color: var(--c-d);
@@ -890,12 +891,12 @@ a.btn {
 	line-height: 28px;
 }
 
-/* Quick color select Black button (has white border) */
-.qcsb {
+/* Quick color select Black and White button (has white/black border, depending on the theme) */
+.qcsb, .qcsw {
 	width: 26px;
 	height: 26px;
 	line-height: 26px;
-	border: 1px solid #fff;
+	border: 1px solid var(--c-f);
 }
 
 /* Hex color input wrapper div */
@@ -1299,6 +1300,14 @@ TD .checkmark, TD .radiomark {
 	width: 100%;
 }
 
+#segutil {
+	margin-bottom: 12px;
+}
+
+#segcont > div:first-child, #fxFind  {
+	margin-top: 4px;
+}
+
 /* Simplify segments */
 .simplified #segcont .lstI {
 	margin-top: 4px;
@@ -1438,6 +1447,11 @@ dialog {
 	position: relative;
 }
 
+.presin {
+	width: 100%; 
+	box-sizing: border-box;
+}
+
 .btn-s,
 .btn-n {
 	border: 1px solid var(--c-2);
@@ -1462,7 +1476,7 @@ dialog {
 .expanded {
 	display: inline-block !important;
 }
-.hide, .expanded .segin.hide, .expanded .presin.hide, .expanded .sbs.hide, .expanded .frz, .expanded .g-icon {
+.hide, .expanded .segin.hide, .expanded .presin.hide, .expanded .sbs.hide, .expanded .g-icon {
 	display: none !important;
 }
 
